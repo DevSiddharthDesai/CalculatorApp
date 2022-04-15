@@ -35,9 +35,18 @@ clearButton.addEventListener('click', function(){
     clearItems();
 });
 
+// On Enter Key press after values input
+numberInput.addEventListener('keydown', function(e){
+    
+    if(e.keyCode == 13 || e.keyCode == 9){
+        console.log("Tab pressed");
+        result.value = eval(numberInput.value);
+    }
+});
 
 // Clear Items Function
 function clearItems(){
     numberInput.value = '';
     result.value = '';
 }
+
